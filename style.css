@@ -1,0 +1,508 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd68a, #7373ff, #ffd68a);
+
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg,#ffb347, #0400ff, #ffb347); /* Gradient background */
+    color: white;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+/* Animated Text */
+.animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: revealText 2s steps(10) forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em ;
+    color:#fff;
+}
+/* Keyframes for revealText Animation */
+@keyframes revealText {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+/* Nav Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ffb347;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+/* Countdown Section Styling */
+#countdown-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+}
+
+.countdown-message h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 70px;
+    transition: transform 0.3s ease;
+}
+
+.countdown-box span {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.countdown-box small {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Home Intro Section */
+#intro {
+    text-align: center;
+    padding: 50px 20px;
+    /* Gradient background for intro */
+    position: relative;
+}
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+}
+.animated-texth1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: popInOneByOne 4s steps(35) 1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em ;
+    display: inline-block;
+    color: black;
+}
+
+#intro p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background:linear-gradient(135deg,#ffb347, #0400ff, #ffb347); 
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 40px; /* Add margin to move it further down */
+    text-decoration: none;
+}
+
+.explore-btn:hover {
+    background:linear-gradient(135deg, #ffd68a, #7373ff, #ffd68a);
+    color: #fff;
+    transform: scale(1.1);
+}
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg,#ffb347, #0400ff, #ffb347); /* Gradient background */
+    color: white;
+}
+/* Animated Footer Text */
+footer .animated-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: popInOneByOne 4s steps(35) 1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em ;
+    display: inline-block;
+    color: white;
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%; /* Rounded logo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    animation: spin 10s linear infinite; /* Spinning animation */
+    transition: transform 0.3s ease;
+}
+.footer-logo img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+
+
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 25px;
+    border-radius: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: popInOneByOne 1s steps(2) 1;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Keyframes for Pop-in Animation */
+@keyframes popInOneByOne {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* General Small Device Styles */
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    /* Header Adjustments */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .animated-text {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+   /* Countdown Section */
+#countdown-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient background */
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+}
+
+.countdown-message h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between time boxes */
+}
+
+.countdown-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 2rem;
+    color: #ff9a9e;
+    margin-bottom: 5px;
+}
+
+.countdown-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+   
+    /* Intro Section */
+    #intro {
+        padding: 30px 10px;
+    }
+
+    .text-content {
+        font-size: 1rem;
+    }
+
+    .animated-texth1 {
+        font-size: 2rem;
+    }
+
+    #intro p {
+        font-size: 1rem;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .explore-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+
+    footer .animated-text {
+        font-size: 1.2rem;
+    }
+
+    .footer-logo img {
+        width: 60px;
+        height: auto;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Tablet-specific Adjustments */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        background-size: contain;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .animated-text {
+        font-size: 1.8rem;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+    }
+
+    /* Countdown section */
+    #countdown-section {
+        padding: 20px;
+    }
+    .countdown-message h2 {
+        font-size: 1.4rem;
+    }
+    .countdown-timer div {
+        width: 70px;
+        padding: 8px;
+    }
+    .countdown-timer div span {
+        font-size: 1.8rem;
+    }
+
+
+    /* Intro Section */
+    #intro {
+        padding: 40px 15px;
+    }
+
+    .animated-texth1 {
+        font-size: 2.2rem;
+    }
+
+    #intro p {
+        font-size: 1.1rem;
+    }
+
+    .explore-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer .animated-text {
+        font-size: 1.4rem;
+    }
+
+    .footer-logo img {
+        width: 70px;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Additional adjustments for very small devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+    body {
+        background-size: 100%;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .animated-text {
+        font-size: 1.4rem;
+    }
+
+    .countdown-message h2 {
+        font-size: 1.2rem;
+    }
+
+    .countdown-box span {
+        font-size: 1.5rem;
+    }
+
+    .countdown-box {
+        padding: 10px;
+        min-width: 50px;
+    }
+
+    /* Adjust spacing between boxes for smaller screens */
+    .countdown-timer {
+        gap: 10px;
+    }
+    .explore-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer .animated-text {
+        font-size: 1rem;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}

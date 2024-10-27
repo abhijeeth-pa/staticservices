@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StaticServices</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="StaticServices Logo">
+            <h1 class="animated-text">StaticServices</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="static.html">Home</a></li>
+            <li><a href="static.html">Our Services</a></li>
+            <li><a href="static.html">Projects</a></li>
+            <li><a href="static.html">About us</a></li>
+            <li><a href="static.html">Contact us</a></li>
+        </ul>
+    </header>
+    
+    <!-- Countdown Section -->
+    <section id="countdown-section">
+        <div class="countdown-message">
+            <h2>Our Website will be live in:</h2>
+            <div class="countdown-timer" id="timer">
+                <div class="countdown-box"><span id="days">4</span> days</div>
+                <div class="countdown-box"><span id="hours">00</span> hours</div>
+                <div class="countdown-box"><span id="minutes">00</span> minutes</div>
+                <div class="countdown-box"><span id="seconds">00</span> seconds</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Intro Section -->
+    <section id="intro">
+        <div class="intro-content">
+            <div class="text-content">
+                <h1 class="animated-texth1">Welcome to Static Services</h1>
+                <p>We design and develop websites that speak for your business. Learn more about our services, projects, and team members.</p>
+                <br>
+                <br>
+                <a href="#explore" class="explore-btn">Explore More</a>
+            </div>
+            <div class="image-container">
+                <img src="logo.gif" alt="Intro Image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo">
+            <img src="logo.png" alt="StaticServices Logo">
+        </div>
+        <h1 class="animated-text">&copy; 2024 Static Services. All rights reserved.</h1>
+        <div class="social-icons">
+            <a href="mailto:support@staticservices.com"><img src="mail.png" alt="Mail"></a>
+            <a href="https://www.instagram.com/staticservices" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/staticservices" target="_blank" rel="noopener"><img src="linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer Script
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 4); // Countdown for 4 days
+
+        function updateCountdown() {
+            const now = new Date();
+            const remainingTime = endDate - now;
+            if (remainingTime >= 0) {
+                const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days;
+                document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+                document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById("timer").innerHTML = "<h3>We're Live Now!</h3>";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
